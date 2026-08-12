@@ -1,0 +1,569 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #E2E8F0;
+            background: #0F172A;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 15px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #E2E8F0;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            padding: 40px 8%;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("Images/Wallpaper.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        /* Hero content on right side */
+
+        .hero-content {
+            position: absolute;
+
+            left: 48%;
+            right: 10%;
+
+            top: 15%;
+
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 30px;
+
+            color: white;
+
+            margin-bottom: 10px;
+        }
+
+        /* Name */
+
+        .hero-content h1 {
+            font-size: 40px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            color: #38bdf8;
+
+            text-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Name underline */
+
+        .hero-content h1::after {
+            content: "";
+
+            display: block;
+
+            width: 500px;
+            height: 3px;
+
+            margin: 10px auto;
+
+            background: #38bdf8;
+
+            border-radius: 10px;
+        }
+
+
+        /* Job title */
+
+        .hero-content p {
+            font-size: 15px;
+
+            color: white;
+
+            margin-top: 15px;
+
+            font-weight: 400;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Hero button */
+
+        .hero-content .btn {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 12px 25px;
+
+            background: #38bdf8;
+
+            color: #0f172a;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero-content .btn:hover {
+            background: #0ea5e9;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+
+            font-size: 35px;
+
+            color: white;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align:left;
+
+            font-size: 18px;
+
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .skill {
+            background: linear-gradient(120deg, rgb(7, 46, 203), rgb(14, 0, 0));
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.08);
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+
+            color: #0284c7;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project {
+            background: linear-gradient(120deg, rgb(18, 5, 163), rgb(14, 0, 0));
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .project:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15); 
+        }
+        
+
+        .project h3 {
+            color: #38bdf8;
+
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            background: #38bdf8;
+
+            color: #0f172a;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           CONTACT FORM
+        ========================= */
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0B1F3A);
+
+         padding: 40px 8%;
+}
+
+.contact-subtitle {
+    color: #CBD5E1;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+
+/* FORM CONTAINER */
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #020617,
+        #0B1F3A
+    );
+
+    border: 1px solid #2563EB;
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(37, 99, 235, 0.15);
+
+    text-align: left;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #F8FAFC;
+
+    font-weight: bold;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 9px 12px;
+
+    background: #020617;
+
+    color: #F8FAFC;
+
+    border: 1px solid #1E40AF;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #38BDF8;
+
+    box-shadow:
+        0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748B;
+}
+
+
+/* SEND BUTTON */
+
+.send-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #2563EB;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #0EA5E9;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .contact {
+        padding: 60px 5%;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+}
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #020617;
+
+            color: #CBD5E1;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero {
+                min-height: 90vh;
+
+                background-position: center;
+            }
+
+
+            .hero-content {
+                left: 35%;
+
+                right: 5%;
+
+                top: 25%;
+            }
+
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+
+            section {
+                padding: 50px 5%;
+            }
+        }
+        /* ========================= 
+                SUCCESS MESSAGE 
+        ========================= */ 
+        .success-message { 
+            display: none; 
+            margin-top: 20px; 
+            padding: 12px; 
+            text-align: center; 
+            color: #4ADE80; 
+            background: rgba(34, 197, 94, 0.10); 
+            border: 1px solid #22C55E; 
+            border-radius: 8px; font-weight: 
+            bold; animation: successAnimation 0.4s ease; 
+        } 
+        @keyframes successAnimation {
+             from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } 
+            }
