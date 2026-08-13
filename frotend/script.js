@@ -12,7 +12,7 @@ contactForm.addEventListener("submit", async function(event) {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/messages", {
+        const response = await fetch("https://krishna-portfolio-1.onrender.com/api/messages", {
             method: "POST",
 
             headers: {
