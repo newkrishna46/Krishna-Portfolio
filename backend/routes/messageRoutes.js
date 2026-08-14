@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post("/", async (req, res) => {
-
     try {
+        console.log("1. Request received");
 
         const { name, email, message } = req.body;
 
@@ -25,7 +25,8 @@ router.post("/", async (req, res) => {
             });
         }
 
-        // Save message to MongoDB
+        console.log("2. Saving to MongoDB...");
+
         const newMessage = new Message({
             name,
             email,
@@ -34,7 +35,9 @@ router.post("/", async (req, res) => {
 
         await newMessage.save();
 
-        // Send email to you
+        console.log("3. MongoDB saved successfully");
+        console.log("4. Sending email...");
+
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
@@ -49,14 +52,15 @@ ${message}
             `
         });
 
+        console.log("5. Email sent successfully");
+
         res.status(200).json({
             success: true,
             message: "Message submitted successfully!"
         });
 
     } catch (error) {
-
-        console.error("Error:", error);
+        console.error("ERROR:", error);
 
         res.status(500).json({
             success: false,
